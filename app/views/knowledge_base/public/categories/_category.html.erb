@@ -1,11 +1,69 @@
-<li class="section <%= visibility_class_name(category) %>">
+<li class="section <%= visibility_class_name(category) %>" style="width: 100%; height: 160px;">
   <%= link_to custom_path_if_needed help_category_path(category.translation, locale: params[:locale]), @knowledge_base do %>
-    <span class="section-inner">
-      <%= icon(category.category_icon, knowledge_base.iconset) %>
-      <span>
-        <span class="title"><%= category.translation.title %></span>
-        <%= visibility_note(category) %>
+    <span class="section-inner" style="position: inherit; justify-content: left; flex-direction: row; text-align: left; height: 140px;">
+      <span style="margin: 10px 40px 10px 10px; width: 45px;">
+        <%= icon(category.category_icon, knowledge_base.iconset) %>
       </span>
+      <span style="display: flex; align-items: start; justify-content: center; flex-direction: column; align-self: start;">
+        <span style="font-weight: bold; margin-bottom: 5px; margin-top: 5px;"><%= category.translation.title %></span>
+        <!--span><%= category.id %></span-->
+        <% if category.id == 12 %>
+          <ul style="list-style-type: disc; margin-left: 15px; font-size: 0.9em;">
+            <li style="margin-bottom: 2px;">Checking your hardware and software to run your product</li>
+            <li style="margin-bottom: 2px;">Downloading the installers and documentation</li>
+            <li style="margin-bottom: 2px;">Activating your dongle</li>
+            <li>Getting started video tutorials</li>
+          </ul>
+        <% end %>
+        <% if category.id == 6 %>
+          <ul style="list-style-type: disc; margin-left: 15px; font-size: 0.9em;">
+            <li style="margin-bottom: 2px;">How to activate your dongle</li>
+            <li style="margin-bottom: 2px;">Testing your dongle and viewing your licenses</li>
+            <li>Troubleshooting issues with dongles and licenses</li>
+          </ul>
+        <% end %>
+        <% if category.id == 8 %>
+          <ul style="list-style-type: disc; margin-left: 15px; font-size: 0.9em;">
+            <li style="margin-bottom: 2px;">Selecting a computer to run your product</li>
+            <li style="margin-bottom: 2px;">Installation steps and troubleshooting</li>
+            <li style="margin-bottom: 2px;">Optimizing Intella for best performance</li>
+            <li>Staying up to date with new versions</li>
+          </ul>
+        <% end %>
+        <% if category.id == 9 %>
+          <ul style="list-style-type: disc; margin-left: 15px; font-size: 0.9em;">
+            <li style="margin-bottom: 2px;">Guides for downloading installers</li>
+            <li style="margin-bottom: 2px;">Training options</li>
+            <li style="margin-bottom: 2px;">Support and consulting options</li>
+            <li>Usage examples</li>
+          </ul>
+        <% end %>
+        <% if category.id == 10 %>
+          <ul style="list-style-type: disc; margin-left: 15px; font-size: 0.9em;">
+            <li style="margin-bottom: 2px;">Getting started videos for our products</li>
+            <li style="margin-bottom: 2px;">Dongles and licensing</li>
+            <li style="margin-bottom: 2px;">Creating and ingesting load files</li>
+            <li>Other usage videos</li>
+          </ul>
+        <% end %>
+        <% if category.id == 3 %>
+          <ul style="list-style-type: disc; margin-left: 15px; font-size: 0.9em;">
+            <li style="margin-bottom: 2px;">Indexing from online sources</li>
+            <li style="margin-bottom: 2px;">Printing and exporting</li>
+            <li style="margin-bottom: 2px;">Running on virtual machines</li>
+            <li>Many questions related to usage and setup</li>
+          </ul>
+        <% end %>
+        <% if category.id == 1 %>
+          <ul style="list-style-type: disc; margin-left: 15px; font-size: 0.9em;">
+            <li style="margin-bottom: 2px;">Troubleshooting error codes</li>
+            <li style="margin-bottom: 2px;">Troubleshooting issues</li>
+            <li style="margin-bottom: 2px;">Repairing corrupt data</li>
+            <li>Resolve export issues</li>
+          </ul>
+        <% end %>
+      </span>
+      <%= visibility_note(category) %>
     </span>
   <% end %>
 </li>
