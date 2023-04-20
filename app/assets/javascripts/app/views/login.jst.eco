@@ -12,12 +12,6 @@
 
       <div class="hero-unit">
         <img class="company-logo" src="<%= @logoUrl %>" alt="<%= @C('product_name') %>">
-	<p style="text-align: left;">
-		Attention Vound customers, we are now using a different ticket system for our support service.
-	</p>
-	<p style="text-align: left;"><strong>
-		For security purposes, you will need to register for a new account on this system.
-	</strong></p>
         <form id="login">
           <div class="form-group">
             <div class="formGroup-label">
